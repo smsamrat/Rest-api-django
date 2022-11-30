@@ -4,5 +4,6 @@ from django.urls import path
 from snippets.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('studentapi/',create_api),
+    path('studentapi/',CreateApi.as_view()),
+    path('studentapi/<int:id>/',CreateApi.as_view()),
 ]
